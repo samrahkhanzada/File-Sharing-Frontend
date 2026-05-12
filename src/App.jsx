@@ -3,7 +3,8 @@ import axios from "axios";
 function App() {
   const [file, setFile] = useState(null);
   const [files, setFiles] = useState([]);
-  const API_URL = "http://localhost:5000/api"; // Deployment ke waqt changehoga
+  // const API_URL = "http://localhost:5000/api"; // Deployment ke waqt changehoga
+  const API_URL = "https://file-sharing-backend-z97w.vercel.app/api"; // Deployment ke waqt changehoga
   const fetchFiles = async () => {
     const res = await axios.get(`${API_URL}/files`);
     setFiles(res.data);
